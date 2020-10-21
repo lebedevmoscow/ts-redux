@@ -6,4 +6,6 @@ export const rootReducer = combineReducers({
   expenses: expensesReducer
 });
 
+export type AppState = ReturnType<typeof rootReducer>
+ 
 export const store = createStore(rootReducer, applyMiddleware(thunk));
